@@ -17,5 +17,6 @@ endif()
 # link
 target_include_directories(OpenGL-demo PRIVATE "${CMAKE_SOURCE_DIR}/deps/include")
 target_link_directories(OpenGL-demo PRIVATE "${CMAKE_SOURCE_DIR}/deps/lib")
-target_link_libraries(OpenGL-demo PRIVATE OpenGL32 glfw3)
+target_link_libraries(OpenGL-demo PRIVATE glew32s glfw3 OpenGL32)
+target_compile_definitions(OpenGL-demo PRIVATE GLEW_STATIC)
 
